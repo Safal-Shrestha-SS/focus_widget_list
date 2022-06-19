@@ -10,30 +10,18 @@ For general information about developing packages, see the Dart guide for
 and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages). 
 -->
+# Focus Widget List
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+Focus the widget in a list
 
 ## Features
+  - Focus the widget
+  - Control blur color
+  - Control blur value
+  - Provide a list of widget
+  - Null Safety
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
-
-## Getting started
-
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
-
-## Usage
-
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
-
-```dart
-const like = 'sample';
-```
-
-## Additional information
-
-TODO: Tell users more about the package: where to find more information, how to 
-contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.
+## Example Project
+ Check the `example` folder
+## Demo
+<img src="https://user-images.githubusercontent.com/58971643/174464865-68b32b9c-3dc0-4230-8864-7c64769ff8b5.gif" width="300" height="620">
