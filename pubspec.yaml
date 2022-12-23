@@ -1,6 +1,6 @@
 name: focus_widget_list
 description: Focus Widget List allows user to focus on a paritcular widget of the list while blurring the other widgets in a list.
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/Safal-Shrestha-SS/focus_widget_list
 
 environment:
