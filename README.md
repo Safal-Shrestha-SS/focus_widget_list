@@ -24,4 +24,4 @@ Focus the widget in a list
 ## Example Project
  Check the `example` folder
 ## Demo
-<img src="https://user-images.githubusercontent.com/58971643/174464865-68b32b9c-3dc0-4230-8864-7c64769ff8b5.gif" width="300" height="620">
+<img src="https://user-images.githubusercontent.com/58971643/209280893-f99981e7-c483-46eb-9938-ae7e3b8cbc85.gif" width="300" height="620">
