@@ -1,11 +1,9 @@
 import 'package:custom_pop_up_menu/custom_pop_up_menu.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 
 import 'package:focus_widget_list/focus_widget_list.dart';
 
 void main() {
-  debugRepaintRainbowEnabled = true;
   runApp(const MyApp());
 }
 
