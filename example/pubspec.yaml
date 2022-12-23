@@ -29,6 +29,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  custom_pop_up_menu: ^1.2.4
+
   focus_widget_list:
     path: ../
 

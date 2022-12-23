@@ -1,8 +1,11 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
+import 'package:custom_pop_up_menu/custom_pop_up_menu.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
+
 import 'package:focus_widget_list/focus_widget_list.dart';
 
 void main() {
+  debugRepaintRainbowEnabled = true;
   runApp(const MyApp());
 }
 
@@ -12,6 +15,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
@@ -33,13 +37,14 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  void disable() {
+  void _incrementCounter() {
     setState(() {
-      disbleFocus = false;
+      test = false;
     });
   }
 
-  bool disbleFocus = false;
+  int index = 0;
+  bool test = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,21 +52,23 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+        child: Stack(
+          fit: StackFit.passthrough,
           children: <Widget>[
-            Expanded(
-                child: FocusWidget(
-              widgetList: listOfWidget,
-              blur: disbleFocus,
-              blurColor: Colors.blue,
-              blurValue: 0.7,
-            ))
+            GestureDetector(
+              behavior: HitTestBehavior.opaque,
+              child: FocusWidget(
+                widgetList: listOfWidget,
+                blur: false,
+                index: index,
+              ),
+            ),
           ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: disable,
+        onPressed: _incrementCounter,
+        tooltip: 'Increment',
         child: const Icon(Icons.add),
       ),
     );
@@ -69,49 +76,85 @@ class _MyHomePageState extends State<MyHomePage> {
 }
 
 List<Widget> listOfWidget = [
-  Container(
-    height: 50,
-    color: Colors.amber[600],
-    child: const Center(child: Text('Entry A')),
+  CustomPopupMenu(
+    pressType: PressType.singleClick,
+    barrierColor: Colors.transparent,
+    enablePassEvent: true,
+    menuBuilder: () {
+      return Container(color: Colors.blue, child: const Text('data'));
+    },
+    child: GestureDetector(
+      behavior: HitTestBehavior.translucent,
+      child: Container(
+        height: 50,
+        color: Colors.amber[600],
+        child: const Center(child: Text('Entry A')),
+      ),
+    ),
   ),
-  Container(
-    height: 50,
-    color: Colors.amber[500],
-    child: const Center(child: Text('Entry B')),
+  CustomPopupMenu(
+    pressType: PressType.singleClick,
+    barrierColor: Colors.transparent,
+    enablePassEvent: true,
+    menuBuilder: () {
+      return Container(color: Colors.blue, child: const Text('data'));
+    },
+    child: Container(
+      height: 50,
+      color: Colors.amber[500],
+      child: const Center(child: Text('Entry B')),
+    ),
   ),
-  Container(
-    height: 50,
-    color: Colors.amber[100],
-    child: const Center(child: Text('Entry C')),
+  CustomPopupMenu(
+    pressType: PressType.singleClick,
+    barrierColor: Colors.transparent,
+    enablePassEvent: true,
+    menuBuilder: () {
+      return Container(color: Colors.blue, child: const Text('data'));
+    },
+    child: Container(
+      height: 50,
+      color: Colors.amber[100],
+      child: const Center(child: Text('Entry C')),
+    ),
   ),
-  Container(
-    height: 50,
-    color: Colors.amber[600],
-    child: const Center(child: Text('Entry A')),
+  CustomPopupMenu(
+    pressType: PressType.singleClick,
+    barrierColor: Colors.transparent,
+    enablePassEvent: true,
+    menuBuilder: () {
+      return Container(color: Colors.blue, child: const Text('data'));
+    },
+    child: Container(
+      height: 50,
+      color: Colors.amber[600],
+      child: const Center(child: Text('Entry A')),
+    ),
   ),
-  Container(
-    height: 50,
-    color: Colors.amber[500],
-    child: const Center(child: Text('Entry B')),
+  CustomPopupMenu(
+    pressType: PressType.singleClick,
+    barrierColor: Colors.transparent,
+    enablePassEvent: true,
+    menuBuilder: () {
+      return Container(color: Colors.blue, child: const Text('data'));
+    },
+    child: Container(
+      height: 50,
+      color: Colors.amber[500],
+      child: const Center(child: Text('Entry B')),
+    ),
   ),
-  Container(
-    height: 50,
-    color: Colors.amber[100],
-    child: const Center(child: Text('Entry C')),
-  ),
-  Container(
-    height: 50,
-    color: Colors.amber[600],
-    child: const Center(child: Text('Entry A')),
-  ),
-  Container(
-    height: 50,
-    color: Colors.amber[500],
-    child: const Center(child: Text('Entry B')),
-  ),
-  Container(
-    height: 50,
-    color: Colors.amber[100],
-    child: const Center(child: Text('Entry C')),
+  CustomPopupMenu(
+    pressType: PressType.singleClick,
+    barrierColor: Colors.transparent,
+    enablePassEvent: true,
+    menuBuilder: () {
+      return Container(color: Colors.blue, child: const Text('data'));
+    },
+    child: Container(
+      height: 50,
+      color: Colors.amber[100],
+      child: const Center(child: Text('Entry C')),
+    ),
   ),
 ];
